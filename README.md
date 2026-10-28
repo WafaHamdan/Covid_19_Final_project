@@ -134,11 +134,26 @@ Clone the repository:
 ```bash
 git clone https://github.com/WafaHamdan/Covid_19_Final_project.git
 cd Covid_19_Final_project
+```
 
+Install the required libraries:
 
-Conclusion
+```bash
+pip install numpy pandas matplotlib seaborn scikit-learn imbalanced-learn jupyter
+```
+
+Start Jupyter Notebook:
+
+```bash
+jupyter notebook COVID19_Prediction_Model_Updated.ipynb
+```
+
+## Conclusion
+
 Three classification models were evaluated using an untouched, group-separated holdout test set and 10-fold stratified group cross-validation.
 
 Decision Tree achieved the highest mean cross-validation accuracy and macro F1-score, while Logistic Regression achieved the highest balanced accuracy. Decision Tree was selected as the final model based on its overall performance and positive-class recall.
-Author
-Wafa Hamdan Alshehri
+
+## Developed By
+
+**Wafa Hamdan Alshehri**
