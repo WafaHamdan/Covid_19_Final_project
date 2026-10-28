@@ -29,23 +29,21 @@ The following models were evaluated:
 
 ## Dataset
 
-The dataset was obtained from Kaggle and contains binary values representing symptoms, existing health conditions, exposure indicators, and COVID-19 status.
+The dataset was obtained from [Kaggle](https://www.kaggle.com/datasets/hemanthhari/symptoms-and-covid-presence) and contains binary values representing symptoms, existing health conditions, exposure indicators, and COVID-19 status.
 
 The target variable is `COVID-19`:
 
 - `Yes`: COVID-19 positive record
 - `No`: COVID-19 negative record
 
-All remaining columns are used as input features.
+All remaining columns are used as input features. `Wearing Masks` and `Sanitization from Market` contain a single value across all records, so they provide no discriminatory signal to the models.
 
-The dataset used by the notebook is available in this repository as:
-
-`covid_dataset.csv`
+The notebook downloads the dataset directly from its public Kaggle source. The repository does not redistribute a separate copy because Kaggle lists the license as **Other (specified in description)** without an explicit redistribution grant.
 
 ## Project Workflow
 
 1. Import the required Python libraries.
-2. Load and inspect the dataset.
+2. Download and inspect the dataset from Kaggle.
 3. Clean column names and encode binary values.
 4. Perform exploratory data analysis.
 5. Examine the target-class distribution.
@@ -96,8 +94,6 @@ Based on the selected evaluation criteria, Decision Tree was chosen as the final
 
 ## Confusion Matrix Summary
 
-The holdout confusion matrices produced the following results:
-
 | Model | True Negative | False Positive | False Negative | True Positive |
 |---|---:|---:|---:|---:|
 | Logistic Regression | 264 | 11 | 82 | 675 |
@@ -125,7 +121,7 @@ The holdout confusion matrices produced the following results:
 4. If Colab displays a security warning, select `Run anyway`.
 5. Wait until all notebook cells finish running.
 
-The dataset is loaded directly from this GitHub repository.
+The dataset is downloaded directly from Kaggle when the notebook runs.
 
 ### Option 2: Run Locally
 
